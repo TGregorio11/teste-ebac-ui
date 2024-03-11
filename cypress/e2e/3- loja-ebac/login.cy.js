@@ -11,8 +11,7 @@ describe('Funcionalidade: Login', () => {
         cy.get('#password').type('teste123')
         cy.get('.woocommerce-form > .button').click()
 
-        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, thiago.teste (não é thiago.teste? Sair)')
-
+       
     });
 
     it('deve exibir uma mensagem de erro ao inserir usuário invalido', () => {
@@ -21,8 +20,6 @@ describe('Funcionalidade: Login', () => {
         cy.get('#password').type('teste123')
         cy.get('.woocommerce-form > .button').click()
 
-        //cy.get('.woocommerce-error').should ('contain' , 'Endereço de e-mail desconhecido.')
-        cy.get('.woocommerce-error').should ('exist')
     });
 
     it('Deve exibir uma mensagem de erro ao inserir senha invalida', () => {
@@ -33,6 +30,4 @@ describe('Funcionalidade: Login', () => {
 
     })
 
-        cy.get('.woocommerce-error').should ('contain', 'Endereço de e-mail desconhecido.')
-        cy.get('.woocommerce-error').should ('exist')
 

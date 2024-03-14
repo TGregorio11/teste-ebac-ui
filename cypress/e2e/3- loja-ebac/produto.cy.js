@@ -13,5 +13,6 @@ describe('Funcionalidade: Produtos', () => {
             //.eq(2)
             .contains('Abominable Hoodie')
             .click()
+            cy.get('#tab-title-description > a').should('contain' , 'Descrição')
     });
 })
